@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="de.stefanpledl.localcast.pdfplugin1"
+      android:versionCode="1"
+      android:versionName="1.0">
+      <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:label="@string/app_name" android:icon="@drawable/icon">
+        <service android:name="de.stefanpledl.localcast.pdfplugin1.PdfPluginService1"
+                  android:exported="true">
+            <intent-filter>
+                <action android:name="de.stefanpledl.localcast.PICK_PDFPLUGIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+		</service>
+    </application>
+</manifest> 
